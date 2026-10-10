@@ -1,0 +1,7 @@
+numpy>=2.0
+pandas>=2.2
+matplotlib>=3.8
+pyyaml>=6.0
+openpyxl>=3.1        # leitura das planilhas oficiais em dados/preparar_dados.py
+nvidia-ml-py>=12.0   # apenas para a medição (experimento/medir_inferencia.py)
+pymupdf4llm>=0.0.17  # apenas para converter o corpus de PDF para .md

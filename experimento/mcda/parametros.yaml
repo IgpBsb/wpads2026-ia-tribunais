@@ -1,0 +1,95 @@
+# Parâmetros do modelo multicritério (TOPSIS + Monte Carlo).
+# Cada parâmetro: base (valor determinístico), min/max (faixa para Monte Carlo, distribuição uniforme),
+# status: medido | fonte | premissa | provisorio  (provisorio = a confirmar com fonte no passo 2)
+# Unidades no nome. Valores monetários em R$ (conversão de US$ pelo parâmetro cambio_brl_usd).
+
+alternativas:
+  A1: {nome: "Infraestrutura própria (on-premises)", sigla: "Própria"}
+  A2: {nome: "Nuvem IaaS nacional (GPU dedicada, região São Paulo)", sigla: "IaaS-BR"}
+  A3: {nome: "API de LLM comercial hospedada no exterior", sigla: "API-ext"}
+  A4: {nome: "Híbrida: casos sensíveis na própria, demais na API", sigla: "Híbrida"}
+
+criterios:
+  # sentido: min (custo) | max (benefício)
+  C1: {nome: "Energia anual (MWh)", sentido: min}
+  C2: {nome: "Emissões anuais (tCO2)", sentido: min}
+  C3: {nome: "Custo anual (R$ mil)", sentido: min}
+  C4: {nome: "Latência por tarefa (s)", sentido: min}
+  C5: {nome: "Soberania e confidencialidade (1-5)", sentido: max}
+  C6: {nome: "Exposição cibernética (1-5)", sentido: min}
+  C7: {nome: "Carga sobre a equipe de TI (FTE/pessoal de TI, %)", sentido: min}
+
+perfis_de_peso:
+  # Ordem: C1..C7. Somam 1.
+  equilibrado:     [0.143, 0.143, 0.143, 0.143, 0.143, 0.143, 0.142]
+  sustentabilidade: [0.25, 0.25, 0.10, 0.10, 0.10, 0.10, 0.10]
+  seguranca:        [0.075, 0.075, 0.10, 0.10, 0.30, 0.25, 0.10]
+  custo_operacao:   [0.075, 0.075, 0.35, 0.10, 0.10, 0.10, 0.20]
+
+cenarios:
+  # Demanda: mediana de casos novos eletrônicos (cnelet) e de pessoal de TI (tptic) da Justiça Estadual, JN 2025.
+  # Lidos de dados/jn_ultimo_ano_tribunais.csv pelo script; aqui só os rótulos.
+  ramo: Estadual
+  portes: [Pequeno, Médio, Grande]
+  tarefas_por_caso: {base: 1, min: 1, max: 5, status: premissa}  # triagem, resumo, minuta...
+
+carga:
+  # Tarefa medida: resumo de ~1 página (bateria resultados/tarefa/, llama3.2, 9 execuções concluídas)
+  energia_dinamica_gpu_J_por_tarefa: {base: 1020.4, min: 809.1, max: 1486.1, status: medido}
+  duracao_s_por_tarefa: {base: 7.26, min: 5.76, max: 10.39, status: medido}
+  tokens_entrada_por_tarefa: {base: 1199, min: 1108, max: 1349, status: medido}
+  tokens_saida_por_tarefa: {base: 755, min: 602, max: 1115, status: medido}
+  potencia_ociosa_gpu_W: {base: 19.0, min: 16.2, max: 24.8, status: medido}
+
+infraestrutura_dedicada:  # vale para A1 e A2 (e para a parte própria de A4)
+  fator_sistema_dinamico: {base: 1.25, min: 1.10, max: 1.50, status: premissa}  # CPU/memória/fonte além da GPU
+  potencia_ociosa_resto_servidor_W: {base: 90, min: 60, max: 150, status: premissa}
+  utilizacao_maxima_gpu: {base: 0.5, min: 0.3, max: 0.7, status: premissa}  # folga para picos
+  redundancia_servidores: {base: 1, min: 1, max: 1, status: premissa}  # N+1
+
+A1_propria:
+  pue: {base: 1.54, min: 1.30, max: 2.00, status: fonte, fonte: "Uptime Institute (2025), média ponderada n=681; faixa = premissa"}
+  capex_servidor_gpu_R: {base: 120000, min: 60000, max: 250000, status: premissa, fonte: "servidor com 1 GPU de inferência classe L4; sem fonte de preço público consolidada"}
+  vida_util_anos: {base: 5, min: 4, max: 6, status: premissa}
+  om_fracao_capex_ano: {base: 0.10, min: 0.05, max: 0.15, status: premissa}
+  tarifa_energia_R_kWh: {base: 0.85, min: 0.65, max: 1.10, status: fonte, fonte: "ANEEL, projeção de tarifa média residencial dez/2026 = R$ 851/MWh (Cenário Energia, 21/09/2026); faixa = premissa"}
+  fte_operacao: {base: 2.0, min: 1.0, max: 3.0, status: premissa}
+  soberania: {base: 5, min: 4, max: 5, status: premissa}
+  exposicao: {base: 2, min: 2, max: 3, status: premissa}
+  latencia_fator: {base: 1.0, min: 1.0, max: 1.0, status: medido}
+
+A2_iaas_br:
+  pue: {base: 1.14, min: 1.09, max: 1.20, status: fonte, fonte: "AWS 1,14 (Jegham et al., 2025, Tab. 1); mín. = Google 1,09 (Elsworth et al., 2025)"}
+  preco_instancia_gpu_USD_h: {base: 1.368, min: 0.894, max: 1.71, status: fonte, fonte: "AWS sa-east-1 on-demand Linux, consultado em 07/10/2026: g6.xlarge (L4) 1,368; g4dn.xlarge (T4) 0,894; g5.xlarge (A10G) 1,71. Ref. us-east-1 g6.xlarge = 0,8048"}
+  fte_operacao: {base: 1.0, min: 0.5, max: 2.0, status: premissa}
+  soberania: {base: 4, min: 3, max: 4, status: premissa}
+  exposicao: {base: 3, min: 2, max: 3, status: premissa}
+  latencia_fator: {base: 0.8, min: 0.6, max: 1.0, status: premissa}  # GPU de datacenter vs RTX 3060
+
+A3_api_ext:
+  # Classe "modelo comercial de porte pequeno/médio via API" (não um produto específico).
+  energia_Wh_por_consulta: {base: 1.545, min: 0.575, max: 4.464, status: fonte, fonte: "Jegham et al. (2025), Tab. 4, prompt médio (1k entrada/1k saída): GPT-4.1 mini 1,545; GPT-4.1 nano 0,575; Claude-3.5 Haiku 4,464. Inclui PUE e servidor"}
+  preco_entrada_USD_por_Mtok: {base: 0.30, min: 0.10, max: 0.50, status: fonte, fonte: "Google Gemini API, consultado em 07/10/2026: 2.5 Flash 0,30; 2.5 Flash-Lite 0,10; 3 Flash 0,50"}
+  preco_saida_USD_por_Mtok: {base: 2.50, min: 0.40, max: 3.00, status: fonte, fonte: "idem: 2.5 Flash 2,50; 2.5 Flash-Lite 0,40; 3 Flash 3,00 (inclui tokens de raciocínio)"}
+  vazao_tok_s: {base: 100, min: 50, max: 200, status: premissa}
+  tempo_primeiro_token_s: {base: 0.5, min: 0.3, max: 1.5, status: premissa}
+  fte_operacao: {base: 0.5, min: 0.25, max: 1.0, status: premissa}
+  soberania: {base: 1, min: 1, max: 2, status: premissa}
+  exposicao: {base: 4, min: 4, max: 5, status: premissa}
+
+A4_hibrida:
+  fracao_sensivel: {base: 0.3, min: 0.1, max: 0.5, status: premissa}  # parcela de casos tratada na própria
+  fte_operacao: {base: 2.0, min: 1.25, max: 3.0, status: premissa}
+  soberania: {base: 4, min: 3, max: 5, status: premissa}
+  exposicao: {base: 3, min: 3, max: 4, status: premissa}
+
+fatores_emissao_tCO2_MWh:
+  brasil_sin: {base: 0.0461, min: 0.0385, max: 0.1263, status: fonte, fonte: "MCTI, fator médio anual do SIN para inventários, 2025 = 0,0461 (planilha Inventario_2026_janago.xlsx). Faixa = fatores anuais 2019-2025: mín. 0,0385 (2023), máx. 0,1263 (2021, crise hídrica)"}
+  exterior_api: {base: 0.35, min: 0.287, max: 0.60, status: fonte, fonte: "Jegham et al. (2025), Tab. 1: Azure 0,35; AWS 0,287; DeepSeek 0,60 kgCO2e/kWh"}
+
+cambio_brl_usd: {base: 5.14, min: 4.97, max: 5.22, status: fonte, fonte: "BCB PTAX venda, 01/09 a 06/10/2026: média 5,1371; mín. 4,9698; máx. 5,2238"}
+
+monte_carlo:
+  n_sorteios: 20000
+  semente: 42
+  dirichlet_alpha: 1.0   # amostragem uniforme no simplex de pesos (Gaona et al., 2025)

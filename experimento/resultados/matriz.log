@@ -1,0 +1,181 @@
+=== llama3.2_in1000_out128 00:55:29
+Potência ociosa da GPU: 23.16 W
+Modelo llama3.2
+  llama3.2 rep  1:   1.35 s    177.9 J  128 tok  1.390 J/tok
+  llama3.2 rep  2:   1.50 s    179.6 J  128 tok  1.403 J/tok
+  llama3.2 rep  3:   1.45 s    191.2 J  128 tok  1.494 J/tok
+  llama3.2 rep  4:   1.57 s    199.6 J  128 tok  1.559 J/tok
+  llama3.2 rep  5:   1.45 s    190.1 J  128 tok  1.485 J/tok
+  llama3.2 rep  6:   1.52 s    184.6 J  128 tok  1.442 J/tok
+  llama3.2 rep  7:   1.47 s    191.6 J  128 tok  1.497 J/tok
+  llama3.2 rep  8:   1.51 s    186.1 J  128 tok  1.454 J/tok
+  llama3.2 rep  9:   1.42 s    196.8 J  128 tok  1.538 J/tok
+  llama3.2 rep 10:   1.43 s    190.2 J  128 tok  1.486 J/tok
+{
+}
+=== llama3.2_in1000_out512 00:56:33
+Potência ociosa da GPU: 23.09 W
+Modelo llama3.2
+  llama3.2 rep  1:   4.10 s    621.3 J  416 tok  1.493 J/tok
+  llama3.2 rep  2:   4.15 s    634.2 J  447 tok  1.419 J/tok
+  llama3.2 rep  3:   4.42 s    696.8 J  474 tok  1.470 J/tok
+  llama3.2 rep  4:   3.06 s    462.2 J  321 tok  1.440 J/tok
+  llama3.2 rep  5:   3.04 s    461.0 J  315 tok  1.464 J/tok
+  llama3.2 rep  6:   4.92 s    758.0 J  512 tok  1.480 J/tok
+  llama3.2 rep  7:   3.80 s    578.2 J  397 tok  1.456 J/tok
+  llama3.2 rep  8:   4.58 s    716.2 J  488 tok  1.468 J/tok
+  llama3.2 rep  9:   4.82 s    759.9 J  512 tok  1.484 J/tok
+  llama3.2 rep 10:   2.91 s    427.3 J  294 tok  1.454 J/tok
+{
+}
+=== llama3.2_in4000_out128 00:58:07
+Potência ociosa da GPU: 17.45 W
+Modelo llama3.2
+  llama3.2 rep  1:   1.68 s    238.2 J  128 tok  1.861 J/tok
+  llama3.2 rep  2:   1.68 s    210.6 J  128 tok  1.645 J/tok
+  llama3.2 rep  3:   1.67 s    221.1 J  128 tok  1.727 J/tok
+  llama3.2 rep  4:   1.69 s    229.5 J  128 tok  1.793 J/tok
+  llama3.2 rep  5:   1.79 s    232.3 J  128 tok  1.814 J/tok
+  llama3.2 rep  6:   1.91 s    241.1 J  128 tok  1.884 J/tok
+  llama3.2 rep  7:   1.62 s    219.9 J  128 tok  1.718 J/tok
+  llama3.2 rep  8:   1.61 s    218.1 J  128 tok  1.704 J/tok
+  llama3.2 rep  9:   1.66 s    219.7 J  128 tok  1.716 J/tok
+  llama3.2 rep 10:   1.63 s    210.4 J  128 tok  1.644 J/tok
+{
+}
+=== llama3.2_in4000_out512 00:59:13
+Potência ociosa da GPU: 18.00 W
+Modelo llama3.2
+  llama3.2 rep  1:   5.35 s    838.0 J  512 tok  1.637 J/tok
+  llama3.2 rep  2:   5.58 s    853.0 J  512 tok  1.666 J/tok
+  llama3.2 rep  3:   5.21 s    827.0 J  512 tok  1.615 J/tok
+  llama3.2 rep  4:   5.25 s    814.9 J  512 tok  1.592 J/tok
+  llama3.2 rep  5:   5.25 s    829.8 J  512 tok  1.621 J/tok
+  llama3.2 rep  6:   5.30 s    825.1 J  512 tok  1.611 J/tok
+  llama3.2 rep  7:   5.29 s    831.7 J  512 tok  1.624 J/tok
+  llama3.2 rep  8:   5.31 s    827.0 J  512 tok  1.615 J/tok
+  llama3.2 rep  9:   5.19 s    821.2 J  512 tok  1.604 J/tok
+  llama3.2 rep 10:   5.38 s    840.5 J  512 tok  1.642 J/tok
+{
+}
+=== llama3.2_in12000_out128 01:01:02
+Potência ociosa da GPU: 18.47 W
+Modelo llama3.2
+  llama3.2 rep  1:   2.39 s    338.0 J  128 tok  2.641 J/tok
+  llama3.2 rep  2:   2.32 s    339.7 J  128 tok  2.654 J/tok
+  llama3.2 rep  3:   2.40 s    342.2 J  128 tok  2.673 J/tok
+  llama3.2 rep  4:   2.42 s    337.8 J  128 tok  2.639 J/tok
+  llama3.2 rep  5:   2.45 s    333.8 J  128 tok  2.608 J/tok
+  llama3.2 rep  6:   2.42 s    353.4 J  128 tok  2.761 J/tok
+  llama3.2 rep  7:   2.46 s    332.3 J  128 tok  2.596 J/tok
+  llama3.2 rep  8:   2.45 s    343.3 J  128 tok  2.682 J/tok
+  llama3.2 rep  9:   2.33 s    321.5 J  128 tok  2.512 J/tok
+  llama3.2 rep 10:   2.36 s    332.1 J  128 tok  2.595 J/tok
+{
+}
+=== llama3.2_in12000_out512 01:02:17
+Potência ociosa da GPU: 18.00 W
+Modelo llama3.2
+  llama3.2 rep  1:   6.28 s    974.1 J  512 tok  1.902 J/tok
+  llama3.2 rep  2:   6.27 s    980.7 J  512 tok  1.915 J/tok
+  llama3.2 rep  3:   5.98 s    954.1 J  494 tok  1.931 J/tok
+  llama3.2 rep  4:   6.09 s    971.0 J  512 tok  1.897 J/tok
+  llama3.2 rep  5:   6.22 s    976.4 J  512 tok  1.907 J/tok
+  llama3.2 rep  6:   6.53 s   1009.5 J  512 tok  1.972 J/tok
+  llama3.2 rep  7:   7.11 s   1073.3 J  512 tok  2.096 J/tok
+  llama3.2 rep  8:   6.70 s   1037.5 J  512 tok  2.026 J/tok
+  llama3.2 rep  9:   6.69 s   1024.2 J  512 tok  2.000 J/tok
+  llama3.2 rep 10:   6.44 s   1007.2 J  512 tok  1.967 J/tok
+{
+}
+=== gemma4_in1000_out128 01:04:19
+Potência ociosa da GPU: 22.50 W
+Modelo gemma4
+  gemma4 rep  1:   2.51 s    306.1 J  128 tok  2.391 J/tok
+  gemma4 rep  2:   2.24 s    304.7 J  128 tok  2.381 J/tok
+  gemma4 rep  3:   2.28 s    296.2 J  128 tok  2.314 J/tok
+  gemma4 rep  4:   2.50 s    311.8 J  128 tok  2.436 J/tok
+  gemma4 rep  5:   2.37 s    299.9 J  128 tok  2.343 J/tok
+  gemma4 rep  6:   2.35 s    311.1 J  128 tok  2.431 J/tok
+  gemma4 rep  7:   2.43 s    308.2 J  128 tok  2.408 J/tok
+  gemma4 rep  8:   2.26 s    308.0 J  128 tok  2.406 J/tok
+  gemma4 rep  9:   2.27 s    316.0 J  128 tok  2.469 J/tok
+  gemma4 rep 10:   2.37 s    299.4 J  128 tok  2.339 J/tok
+{
+}
+=== gemma4_in1000_out512 01:05:59
+Potência ociosa da GPU: 17.55 W
+Modelo gemma4
+  gemma4 rep  1:   7.90 s   1177.0 J  512 tok  2.299 J/tok
+  gemma4 rep  2:   8.21 s   1186.6 J  512 tok  2.318 J/tok
+  gemma4 rep  3:   7.97 s   1180.2 J  512 tok  2.305 J/tok
+  gemma4 rep  4:   8.07 s   1207.8 J  512 tok  2.359 J/tok
+  gemma4 rep  5:   8.52 s   1242.0 J  512 tok  2.426 J/tok
+  gemma4 rep  6:   8.37 s   1233.9 J  512 tok  2.410 J/tok
+  gemma4 rep  7:   8.06 s   1210.9 J  512 tok  2.365 J/tok
+  gemma4 rep  8:   8.11 s   1200.0 J  512 tok  2.344 J/tok
+  gemma4 rep  9:   7.84 s   1196.2 J  512 tok  2.336 J/tok
+  gemma4 rep 10:   7.91 s   1207.6 J  512 tok  2.359 J/tok
+{
+}
+=== gemma4_in4000_out128 01:09:05
+Potência ociosa da GPU: 20.59 W
+Modelo gemma4
+  gemma4 rep  1:   2.91 s    369.6 J  128 tok  2.887 J/tok
+  gemma4 rep  2:   2.78 s    357.9 J  128 tok  2.796 J/tok
+  gemma4 rep  3:   2.68 s    347.8 J  128 tok  2.717 J/tok
+  gemma4 rep  4:   2.81 s    372.1 J  128 tok  2.907 J/tok
+  gemma4 rep  5:   2.87 s    360.0 J  128 tok  2.812 J/tok
+  gemma4 rep  6:   2.61 s    343.5 J  128 tok  2.684 J/tok
+  gemma4 rep  7:   2.80 s    357.8 J  128 tok  2.796 J/tok
+  gemma4 rep  8:   3.64 s    374.3 J  128 tok  2.924 J/tok
+  gemma4 rep  9:   2.75 s    345.7 J  128 tok  2.701 J/tok
+  gemma4 rep 10:   2.79 s    353.3 J  128 tok  2.760 J/tok
+{
+}
+=== gemma4_in4000_out512 01:11:03
+Potência ociosa da GPU: 22.16 W
+Modelo gemma4
+  gemma4 rep  1:   8.66 s   1257.1 J  512 tok  2.455 J/tok
+  gemma4 rep  2:   8.09 s   1213.1 J  512 tok  2.369 J/tok
+  gemma4 rep  3:   8.40 s   1248.0 J  512 tok  2.437 J/tok
+  gemma4 rep  4:   8.39 s   1253.2 J  512 tok  2.448 J/tok
+  gemma4 rep  5:   8.41 s   1256.7 J  512 tok  2.454 J/tok
+  gemma4 rep  6:   8.56 s   1265.2 J  512 tok  2.471 J/tok
+  gemma4 rep  7:   8.51 s   1271.6 J  512 tok  2.484 J/tok
+  gemma4 rep  8:   8.45 s   1245.4 J  512 tok  2.432 J/tok
+  gemma4 rep  9:   8.58 s   1262.2 J  512 tok  2.465 J/tok
+  gemma4 rep 10:   8.43 s   1250.3 J  512 tok  2.442 J/tok
+{
+}
+=== gemma4_in12000_out128 01:14:13
+Potência ociosa da GPU: 18.89 W
+Modelo gemma4
+  gemma4 rep  1:   3.61 s    477.3 J  128 tok  3.729 J/tok
+  gemma4 rep  2:   3.46 s    460.3 J  128 tok  3.596 J/tok
+  gemma4 rep  3:   3.53 s    475.6 J  128 tok  3.716 J/tok
+  gemma4 rep  4:   3.75 s    492.3 J  128 tok  3.846 J/tok
+  gemma4 rep  5:   3.43 s    487.4 J  128 tok  3.808 J/tok
+  gemma4 rep  6:   3.47 s    470.0 J  128 tok  3.672 J/tok
+  gemma4 rep  7:   4.37 s    507.1 J  128 tok  3.962 J/tok
+  gemma4 rep  8:   3.33 s    460.0 J  128 tok  3.594 J/tok
+  gemma4 rep  9:   3.24 s    457.3 J  128 tok  3.573 J/tok
+  gemma4 rep 10:   3.42 s    461.9 J  128 tok  3.609 J/tok
+{
+}
+=== gemma4_in12000_out512 01:16:05
+Potência ociosa da GPU: 18.92 W
+Modelo gemma4
+  gemma4 rep  1:   9.75 s   1399.5 J  512 tok  2.733 J/tok
+  gemma4 rep  2:   9.55 s   1394.2 J  512 tok  2.723 J/tok
+  gemma4 rep  3:   9.39 s   1393.3 J  512 tok  2.721 J/tok
+  gemma4 rep  4:   9.31 s   1404.5 J  512 tok  2.743 J/tok
+  gemma4 rep  5:   9.33 s   1389.8 J  512 tok  2.715 J/tok
+  gemma4 rep  6:   9.72 s   1435.8 J  512 tok  2.804 J/tok
+  gemma4 rep  7:   9.12 s   1380.9 J  512 tok  2.697 J/tok
+  gemma4 rep  8:   9.25 s   1398.5 J  512 tok  2.731 J/tok
+  gemma4 rep  9:   9.14 s   1390.4 J  512 tok  2.716 J/tok
+  gemma4 rep 10:   9.19 s   1389.8 J  512 tok  2.714 J/tok
+{
+}
+=== FIM 01:19:08

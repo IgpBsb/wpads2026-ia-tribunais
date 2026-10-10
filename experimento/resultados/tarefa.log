@@ -1,0 +1,37 @@
+=== llama3.2 think=padrao 01:20:30
+Potência ociosa da GPU: 21.33 W
+  llama3.2 rep  1:   6.15 s    967.7 J  624 tok  1.551 J/tok
+  llama3.2 rep  2:  10.39 s   1707.6 J  1115 tok  1.532 J/tok
+  llama3.2 rep  3:   5.76 s    931.9 J  603 tok  1.545 J/tok
+  llama3.2 rep  4:   6.77 s   1098.4 J  700 tok  1.569 J/tok
+  llama3.2 rep  5:  39.47 s   6632.0 J  4096 tok  1.619 J/tok
+  llama3.2 rep  6:   6.91 s   1105.1 J  697 tok  1.586 J/tok
+  llama3.2 rep  7:   7.78 s   1272.7 J  816 tok  1.560 J/tok
+  llama3.2 rep  8:   5.88 s    953.5 J  602 tok  1.584 J/tok
+  llama3.2 rep  9:   7.90 s   1282.5 J  826 tok  1.553 J/tok
+  llama3.2 rep 10:   7.78 s   1257.3 J  815 tok  1.543 J/tok
+=== gemma4 think=nao 01:23:19
+Potência ociosa da GPU: 19.08 W
+  gemma4 rep  1:  11.40 s   1701.9 J  691 tok  2.463 J/tok
+  gemma4 rep  2:  13.63 s   2051.8 J  823 tok  2.493 J/tok
+  gemma4 rep  3:  17.19 s   2597.9 J  1060 tok  2.451 J/tok
+  gemma4 rep  4:  15.89 s   2420.0 J  980 tok  2.469 J/tok
+  gemma4 rep  5:  15.09 s   2305.4 J  925 tok  2.492 J/tok
+  gemma4 rep  6:  15.49 s   2395.7 J  962 tok  2.490 J/tok
+  gemma4 rep  7:  22.13 s   3490.0 J  1439 tok  2.425 J/tok
+  gemma4 rep  8:  15.96 s   2490.0 J  1018 tok  2.446 J/tok
+  gemma4 rep  9:  16.25 s   2526.5 J  1055 tok  2.395 J/tok
+  gemma4 rep 10:  14.98 s   2264.8 J  927 tok  2.443 J/tok
+=== gemma4 think=sim 01:27:45
+Potência ociosa da GPU: 24.77 W
+  gemma4 rep  1:  23.97 s   3742.0 J  1552 tok  2.411 J/tok
+  gemma4 rep  2:  30.38 s   4764.6 J  1959 tok  2.432 J/tok
+  gemma4 rep  3:  30.76 s   4772.2 J  1945 tok  2.454 J/tok
+  gemma4 rep  4:  26.93 s   4153.2 J  1684 tok  2.466 J/tok
+  gemma4 rep  5:  24.11 s   3742.5 J  1536 tok  2.437 J/tok
+  gemma4 rep  6:  26.39 s   4117.8 J  1729 tok  2.382 J/tok
+  gemma4 rep  7:  27.44 s   4339.7 J  1822 tok  2.382 J/tok
+  gemma4 rep  8:  25.63 s   4032.9 J  1696 tok  2.378 J/tok
+  gemma4 rep  9:  33.03 s   5273.3 J  2236 tok  2.358 J/tok
+  gemma4 rep 10:  29.64 s   4736.4 J  2005 tok  2.362 J/tok
+=== FIM 01:34:32

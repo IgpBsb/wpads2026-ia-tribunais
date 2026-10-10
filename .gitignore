@@ -1,0 +1,19 @@
+# Sincronização do Google Drive e sistema
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Nunca versionar: referências, documentos e planilhas brutas
+*.docx
+*.xlsx
+*.xls
+Referencias/
+artigo/
+corpus/
+CLAUDE.md
