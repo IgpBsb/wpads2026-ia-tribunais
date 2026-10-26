@@ -199,7 +199,7 @@ def main():
     # Figura: frequência de 1º lugar (pesos + parâmetros); mesma tipografia de experimento/figuras.py
     plt.rcParams.update({"font.size": 8, "font.family": "serif", "axes.spines.top": False,
                          "axes.spines.right": False})
-    fig, ax = plt.subplots(figsize=(6.3, 2.4))
+    fig, ax = plt.subplots(figsize=(6.3, 2.0))
     x = np.arange(len(cen))
     larg = 0.2
     for i, (a, s) in enumerate(zip(ALT, siglas)):

@@ -20,7 +20,8 @@ import pynvml
 # 127.0.0.1 em vez de localhost: no Windows, localhost tenta IPv6 antes e soma ~2 s ociosos a cada chamada
 OLLAMA = "http://127.0.0.1:11434"
 RAIZ = Path(__file__).resolve().parent.parent
-CORPUS_PADRAO = RAIZ / "Referencias" / "04_Normativos-Setor-Publico"
+# mesmos arquivos de Referencias/04_Normativos-Setor-Publico usados nas medições de 07/10/2026
+CORPUS_PADRAO = RAIZ / "corpus"
 
 
 def ollama(rota, payload=None, timeout=600):
