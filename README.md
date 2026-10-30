@@ -24,7 +24,7 @@ experimento/
   consolidar.py            consolida a bateria 1 e ajusta E = a + b*n_entrada + c*n_saida
   mcda/parametros.yaml     parâmetros do modelo, com valor-base, faixa, status e fonte
   mcda/mcda.py             TOPSIS, perfis de peso, Monte Carlo (Dirichlet) e sensibilidade
-  mcda/sensibilidade_falhas.py  efeito de incluir a geração descontrolada nas projeções
+  mcda/sensibilidade_falhas.py  efeito de incluir a geração descontrolada nas projeções (grava resultados/mcda/sensibilidade_falhas.csv)
   resultados/              saídas brutas e consolidadas de todas as rodadas
 ```
 
